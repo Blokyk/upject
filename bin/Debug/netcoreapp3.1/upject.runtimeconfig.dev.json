@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/blokyk/.dotnet/store/|arch|/|tfm|",
+      "/home/blokyk/.nuget/packages"
+    ]
+  }
+}
