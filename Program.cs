@@ -1,8 +1,7 @@
 ﻿using System;
 using System.IO;
-using System.Threading;
+using System.Linq;
 using System.Threading.Tasks;
-
 using Octokit;
 
 namespace upject
@@ -185,11 +184,10 @@ namespace upject
         static void WriteCard(ProjectCard card) {
             string text;
 
-            //writer.WriteLine("\n---\n");
 
             if (card.ContentUrl != null) {
                 var cardURL = card.ContentUrl;
-                var issueID = Int32.Parse(cardURL.Split('/')[^1]);
+                var issueID = Int32.Parse(cardURL.Split('/').Last());
                 var issue = issuesClient.Get(repo.Id, issueID).Result;
 
                 text = MakeLink(issue.Title, issue.Url);

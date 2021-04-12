@@ -10,6 +10,7 @@
 # Build artifact
 bin/
 obj/
+publish/
 
 # Misc
 *.old

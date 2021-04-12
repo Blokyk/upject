@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>8b6e4e33-140f-4986-84dc-05c225f9d4d6</UserSecretsId>
+    <TargetFrameworks>net5;netcoreapp3.1;netcoreapp3</TargetFrameworks>
+    <TargetFrameworks  Condition="'$(OS)' == 'Windows_NT'">net5;netcoreapp3.1;netcoreapp3;net46</TargetFrameworks>
+    <NoWarn>NETSDK1138</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
